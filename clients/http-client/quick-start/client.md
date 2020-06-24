@@ -87,7 +87,9 @@ For example you can limit `threadCount` or setup [proxy](/clients/http-client/fe
 
 ```kotlin
 val client = HttpClient(CIO) {
-    threadCount = 2
+    engine {
+        threadCount = 2
+    }
 }
 ```
 
